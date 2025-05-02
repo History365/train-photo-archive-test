@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Train Photo Archive</title>
+</head>
+<body>
+  <h1>Upload a Train Photo</h1>
+
+  <form id="uploadForm" enctype="multipart/form-data">
+    <input type="text" name="username" placeholder="Your Name" required><br>
+    <input type="text" name="locomotive" placeholder="Locomotive ID" required><br>
+    <input type="file" name="photo" accept="image/*" required><br>
+    <button type="submit">Upload</button>
+  </form>
+
+  <div id="response"></div>
+
+  <script>
+    document.getElementById('uploadForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(e.target);
+      const response = await fetch('/api/upload', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const result = await response.text();
+      document.getElementById('response').innerText = result;
+    });
+  </script>
+</body>
+</html>
