@@ -9,4 +9,4 @@ database_id = "aa6d1651-8d95-4dee-8deb-3faba242b93f"
 
 [[r2_buckets]]
 binding = "R2_BUCKET"
-bucket_name = "train-photo-photos"
+bucket_name = "train-photo-archive-test"
