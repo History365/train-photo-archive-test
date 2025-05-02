@@ -1,10 +1,10 @@
-name = "train-photo-archive"
-compatibility_date = "2024-05-01"
+name = "train-photo-archive-test"
+compatibility_date = "2025-05-01"
 pages_build_output_dir = "./public"
 
 [[d1_databases]]
 binding = "DB"
-database_name = "train-photo-archive-db"
+database_name = "train-photo-archive-test-db"
 database_id = "aa6d1651-8d95-4dee-8deb-3faba242b93f"
 
 [[r2_buckets]]
